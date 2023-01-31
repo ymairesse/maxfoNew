@@ -1,0 +1,71 @@
+<button type="button" class="btn btn-danger" id="btn-saveCalendar" style="float:left">Enregistrer</button>
+<div style="text-align: center">
+<h2>
+    <button type="button" class="btn btn-info" id="btn-prevMonth" title="Mois précédent"><i class="fa fa-arrow-left"></i></button> 
+    {$mois} {$todayYear}
+    <button type="button" class="btn btn-info" id="btn-nextMonth" title="Mois suivant"><i class="fa fa-arrow-right"></i></button> 
+</h2>
+</div>
+
+<div class="container" style="max-height:35em; overflow: auto"  >
+
+{{* <table class="table table-condensed">
+    <tr>
+        <th>&nbsp;</td>
+        {foreach from=$listePeriodes item=$periode}
+            <th>{$periode.debut}<span class="hidden-xs"> -{$periode.fin}</span></th>
+        {/foreach}
+        
+    </tr>
+    {foreach from=$calendar item = $day}
+        <tr {if $day.dayOfWeek == 1}class="trGreen"{/if}>
+            <td data-day="{$day.dayOfWeek}"><strong>{$day.fr}</strong><br>
+                {assign var=longJourFr value=$day.fr|strpos:' '+1}
+                <button type="button" 
+                    class="btn btn-danger btn-xs btn-sameDay" 
+                    data-day="{$day.dayOfWeek}"
+                    data-date="{$day.fr|substr:$longJourFr:5}"
+                    data-jourfr="{$day.fr|substr:0:$longJourFr}"
+                    title="Chaque {$day.fr|substr:0:$longJourFr}">
+                        <i class="fa fa-random"></i>
+                </button>
+                <button type="button" 
+                    class="btn btn-success btn-xs btn-allDay"
+                    data-periode="{$day.dayOfWeek}"
+                    data-date="{$day.fr|substr:$longJourFr:5}"
+                    title="Toutes les périodes du {$day.fr|substr:0:$longJourFr}">
+                        <i class="fa fa-arrow-right"></i>
+                </button>
+            </td>
+            {foreach from=$listePeriodes item=$periode}
+                                
+                <td data-periode="{$day.universel}_{$periode.debut}">
+                
+                <div class="checkbox">
+                
+                    <label>
+                        <input type="checkbox" value="{$day.universel}_{$periode.debut}" 
+                        data-periode="{$periode.debut}"
+                        data-day="{$day.dayOfWeek}"
+                        data-date="{$day.fr|substr:$longJourFr:5}"
+                        {if in_array()>
+                        {$periode.debut}
+                    </label>
+                </div>
+                    
+                </td>
+            {/foreach}
+            
+        </tr>
+    {/foreach}
+
+
+
+</table> *}}
+</div>
+
+<script>
+
+
+
+</script>

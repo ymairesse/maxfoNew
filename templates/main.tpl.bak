@@ -1,0 +1,146 @@
+
+
+<script>
+
+	$(document).ready(function() {
+
+
+		$('#btn-calendrier').click(function() {
+			$.post('inc/getCalendar.inc.php', {}, function(resultat) {
+				$('#corps').html(resultat);
+			})
+		})
+
+		$('body').on('click', '.btn-sameDay', function(){
+			var title = 'Recopie';
+			var jourFR = $(this).data('jourfr');
+			var bouton = $(this);
+			bootbox.confirm({
+				title: title,
+				message: 'Veuillez confirmer la recopie sur chaque <strong>' + jourFR + '</strong>',
+				callback: function(result){
+					if (result == true) {
+						// le numéro du jour
+						var jour = bouton.data('day');
+						// la date sous form dd/mm
+						var date = bouton.data('date');
+						// construction du modèle de journée à recopier
+						var modeleJour = {};
+						$('input:checkbox[data-date="' + date + '"]').each(function(i){
+							var ch = $(this).is(':checked') ? 1 : 0;
+							var periode = $(this).data('periode');
+							modeleJour[periode] = ch;
+						})
+						var n = 0
+						// recopier le modèle de journée dans les jours semaine suivants
+						$('input:checkbox[data-day="' + jour + '"]').each(function(i){
+							var periode = $(this).data('periode');
+							$(this).prop('checked', (modeleJour[periode] == 1));
+							n++
+						})
+						bootbox.alert({
+							title: 'Recopie',
+							message: n + ' recopies sur chaque ' + jourFR
+							})
+					}
+				}
+			})
+		})
+
+		$('body').on('click', '.btn-allDay', function(){
+			var date = $(this).data('date');
+			$('input:checkbox[data-date="' + date + '"]').each(function(){
+				$(this).prop('checked', !$(this).is(':checked'));
+			});
+		})
+
+		$('#btn-periodes').click(function(){
+			$.post('inc/editPeriodes.inc.php', {}, function(resultat){
+				$('#corps').html(resultat);
+			})
+		})
+
+		$('#btn-logout').click(function() {
+			bootbox.confirm({
+				title: 'Déconnexion',
+				message: 'Veuillez confirmer la déconnexion',
+				callback: function(result) {
+					if (result == true) {
+						$.post('inc/logout.inc.php', {},
+							function(resultat) {
+								window.location.assign('{$BASEDIR}');
+							})
+					}
+				}
+			})
+
+		})
+
+		$('#btn-profil').click(function() {
+			$.post('inc/editProfile.inc.php', {}, function(resultat) {
+				$('#corps').html(resultat);
+			})
+		})
+
+
+		$('#btn-passwd').click(function() {
+			$.post('inc/passwd.inc.php', {}, function(resultat) {
+				$('#corps').html(resultat);
+			})
+		})
+
+
+		$('body').on('click', '.inscription', function(){
+			var isChecked = $(this).prop('checked');
+			if (isChecked == true) {
+				$(this).closest('td').find('.me').removeClass('unSelect');
+			}
+			else {
+				$(this).closest('td').find('.me').addClass('unSelect');
+			}
+		})
+
+		$('body').on('click', '#btn-saveCalendar', function(){
+			var formulaire = $('#formInscription').serialize();
+			var title = 'Enregistrement des permanences';
+			$.post('inc/warningModifCalendar.inc.php', {
+				formulaire: formulaire
+				}, function(resultat){
+					
+					bootbox.confirm({
+						title: title,
+						message: resultat,
+						    buttons: {
+								confirm: {
+									label: 'Je confirme!',
+									className: 'btn-danger'
+								},
+								cancel: {
+									label: 'Annuler',
+									className: 'btn-info'
+								}
+							},
+						callback: function(result){
+							if (result == true) {
+								$.post('inc/saveCalendar.inc.php', {
+									formulaire: formulaire
+								}, function(resultat){
+									bootbox.alert({
+										title: title, 
+										message: resultat
+									})
+									$.post('inc/getCalendar.inc.php', {}, function(resultat2) {
+									$('#corps').html(resultat2);
+									});
+								})
+							}
+						}
+					
+					})
+
+					}
+				)
+			})
+
+	})
+</script>

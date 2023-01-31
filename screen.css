@@ -1,0 +1,622 @@
+body {
+    margin: auto;
+    padding: 0 0 2em;
+    background-image: '../images/oxfambg.png';
+    background-position: center center;
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 10pt;
+}
+
+#texte {
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    float: left;
+    font-size: 11pt;
+    min-height: 400px;
+}
+
+h1 {
+    border-bottom: 1px dashed #ff6600;
+    font-size: x-large;
+    font-weight: bold;
+    color: #ff6600;
+    text-align: center;
+}
+
+h2 {
+    font-size: large;
+    font-weight: bold;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    background-color: hsl(41, 73%, 57%) !important;
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f1dbab", endColorstr="#e1ae41");
+    background-image: -khtml-gradient(linear, left top, left bottom, from(#f1dbab), to(#e1ae41));
+    background-image: -moz-linear-gradient(top, #f1dbab, #e1ae41);
+    background-image: -ms-linear-gradient(top, #f1dbab, #e1ae41);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f1dbab), color-stop(100%, #e1ae41));
+    background-image: -webkit-linear-gradient(top, #f1dbab, #e1ae41);
+    background-image: -o-linear-gradient(top, #f1dbab, #e1ae41);
+    background-image: linear-gradient(#f1dbab, #e1ae41);
+    border-color: #e1ae41 #e1ae41 hsl(41, 73%, 51%);
+    color: #333 !important;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.39);
+    -webkit-font-smoothing: antialiased;
+}
+
+h3 {
+    border-style: none none solid solid;
+    border-color: #ff6600;
+    border-width: 1px;
+    font-size: 14px;
+    margin-bottom: 2px;
+    color: #000;
+    background-color: #FFEFC1;
+    padding: 0.5em 1em;
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+a:active {
+    color: #ff0066;
+}
+
+fieldset {
+    border: 0;
+    border-radius: 10px;
+}
+
+form {
+    border: 1px dashed Red;
+    padding: 15px;
+}
+
+.microForm {
+    margin: 0;
+    padding: 0;
+}
+
+input[type='text'], input[type='passwd'], select, textarea {
+    background: #eeeeee repeat scroll 0% 50%;
+    color: #111111;
+}
+
+.bouton {
+    cursor: pointer;
+}
+
+.droite {
+    margin: 5px;
+    background: #eeeeee repeat scroll 0% 50%;
+    top: 60px;
+    float: right;
+    width: 140px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#footer {
+    margin: 0 auto;
+    padding: 0 2em;
+    width: 1000px;
+    font-size: 10px;
+    font-weight: normal;
+    bottom: 0;
+    position: fixed;
+    background-color: #ffe37f;
+}
+
+.imageGauche {
+    padding: 10px;
+    float: left;
+}
+
+.imageDroite {
+    padding-left: 15px;
+    float: right;
+}
+
+.boite {
+    padding: 5px 10px;
+    float: left;
+    width: 25%;
+}
+
+#logo {
+    padding: 30px;
+    text-align: center;
+}
+
+#pied {
+    font-size: 0.7em;
+}
+
+.liste ul {
+    list-style-type: none;
+    padding-left: 1em;
+}
+
+.liste li {
+    padding-bottom: 1em;
+    margin-left: 0em;
+}
+
+.micro {
+    font-size: 0.8em;
+}
+
+.nano {
+    font-size: 0.6em;
+}
+
+.blocinfo {
+    border-top: 1px solid red;
+    text-align: center;
+    padding-top: 5px;
+}
+
+.oublie {
+    background-color: red;
+    color: white;
+}
+
+#entete {
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 90px;
+    background-image: url(images/gradient.jpg);
+}
+
+#entete h1 {
+    margin-top: 1em;
+}
+
+#menu1 {
+    width: 150px;
+    float: left;
+}
+
+#lepied {
+    border-top: 1px solid red;
+    clear: both;
+    padding-top: 1em;
+}
+
+#corps {
+    padding: 0 1em;
+}
+
+span.error {
+    margin: 0 1em;
+    padding: 0 1em;
+    background-color: red;
+    color: white;
+}
+
+.tableauAdmin {
+    width: 100%;
+    margin-bottom: 5em;
+    font-size: 10pt;
+}
+
+.tableauAdmin td {
+    border: 1px solid #dddddd;
+}
+
+.tableauAdmin th {
+    border: 1px outset black;
+    padding: 0;
+    background-color: #dddddd;
+    font-weight: normal;
+    font-size: 0.9em;
+}
+
+.tableauAdmin .bilan {
+    background-color: #ccccee;
+}
+
+.tableauAdmin .bilan .echecs strong {
+    color: red;
+}
+
+.tableauAdmin .bilan .echecs {
+    text-align: left;
+}
+
+.tableauBulletin {
+    width: 100%;
+}
+
+.tableauBulletin td {
+    border: 1px solid #dddddd;
+}
+
+.tableauBulletin th {
+    border: 1px outset black;
+    padding: 0;
+    background-color: #dddddd;
+    font-weight: normal;
+    font-size: 0.9em;
+}
+
+.tableauBulletin .bilan {
+    background-color: #ccccee;
+}
+
+.tableauBulletin .bilan .echecs strong {
+    color: red;
+}
+
+.tableauBulletin .bilan .echecs {
+    text-align: left;
+}
+
+.tableauGroupes {
+    list-style-type: none;
+}
+
+.tableauGroupes li {
+    float: left;
+}
+
+.tableauGroupes {
+    clear: both;
+}
+
+.tableauGroupes li a {
+    border: 2px outset orange;
+    margin: 0.1em;
+    padding: 0.1em;
+    background-color: orange;
+    color: white;
+    width: 3em;
+    text-align: center;
+}
+
+.unePhoto {
+    margin: 0.5em;
+    float: left;
+    text-align: center;
+    cursor: pointer;
+}
+
+#photo {
+    float: right;
+}
+
+.ombre {
+    border: 5px solid #fff;
+    -moz-box-shadow: 8px 8px 12px #aaa;
+    -webkit-box-shadow: 8px 8px 12px #aaa;
+    box-shadow: 8px 8px 12px #555;
+}
+
+.photo {
+    box-shadow: 1px 1px 12px #555;
+}
+
+#barreIcones {
+    clear: both;
+    text-align: left;
+    height: 22px;
+    background-color: #eeeeee;
+}
+
+#barreIcones * {
+    cursor: pointer;
+}
+
+#listeImages {
+    list-style-type: none;
+}
+
+#listeImages li {
+    float: left;
+}
+
+#listeClasses {
+    clear: both;
+}
+
+.manque {
+    background-color: #00ff00;
+}
+
+.echec {
+    border: 2px solid black;
+    color: red;
+    font-weight: bold;
+}
+
+td.echec {
+    border: 2px solid #aaa;
+}
+
+.cote {
+    text-align: center;
+}
+
+.bilan {
+    background-color: #dddddd;
+}
+
+#logins {
+    border: 2px inset orange;
+    overflow: scroll;
+    height: 20em;
+}
+
+.erreur {
+    border: 2px outset red;
+    color: red;
+    list-style-type: none;
+    padding-left: 0.5em;
+}
+
+.ok {
+    border: 2px outset green;
+    color: green;
+    list-style-type: none;
+    padding-left: 0.5em;
+}
+
+.FC {
+    background-color: #ffffbb;
+}
+
+.OG {
+    background-color: #ddffff;
+}
+
+.OB {
+    background-color: #FAE1AB;
+}
+
+.AC {
+    background-color: #a0ffa0;
+}
+
+.NC {
+    font-size: 0.6em;
+}
+
+.STAGE {
+    color: blue;
+    background-color: #ffffdd;
+}
+
+.bilan {
+    background-color: #ccccee;
+    text-align: right;
+    padding-right: 0.5em;
+}
+
+.incorrect {
+    background-color: #ff0000;
+    color: #ffffff;
+}
+
+.divUser {
+    border: 1px solid red;
+    width: 160px;
+    text-align: center;
+}
+
+.fleches {
+    cursor: pointer;
+}
+
+.hover {
+    opacity: 0.8;
+}
+
+#menu {
+    margin: 5em auto;
+    width: 640px;
+}
+
+.sousPrg {
+    padding: 1em;
+    float: left;
+    list-style-type: none;
+    box-shadow: 1px 1px 12px #555555
+}
+
+.sousPrg:hover {
+    box-shadow: 1px 1px 3px #555555;
+    position: relative;
+    left: 3px;
+}
+
+.sousPrg a img {
+    border: none;
+}
+
+#titreAppli {
+    text-align: center;
+    font-size: 2em;
+    display: block;
+}
+
+#resultatModif {
+    border-style: none solid solid none;
+    border-color: #aaaaaa;
+    position: absolute;
+    top: 100px;
+    left: 20em;
+    width: 40em;
+    cursor: pointer;
+    background-color: #dddddd;
+    display: none;
+}
+
+#barreIcones {
+    display: none;
+    font-weight: bold;
+}
+
+.icone {
+    cursor: pointer
+}
+
+#miniPersoEleve {
+    float: right;
+}
+
+.periode0 {
+    background-color: #ffffaa;
+    text-align: center;
+}
+
+.periode1 {
+    background-color: #c8ffc8;
+    text-align: center;
+}
+
+#ouvrir {
+    cursor: pointer;
+}
+
+input:disabled {
+    border: none;
+    color: #000;
+    background-color: #eee;
+}
+
+input:focus {
+    background-color: #ccf;
+}
+
+td.periode {
+    font-weight: bold;
+    text-align: center;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.tri {
+    background-image: url(images/sortable.png);
+    background-position: right center;
+    background-repeat: no-repeat;
+    min-width: 5em;
+}
+
+#trombi li {
+    display: block;
+    width: 140px;
+    height: 250px;
+}
+
+.courier {
+    font-family: Courier, monospace;
+}
+
+.questionImportante {
+    border: 2px solid red;
+    padding: 1em 2em 2em 80px;
+    background-image: url(images/warning.png);
+    background-color: #ffff88;
+    background-repeat: no-repeat;
+    background-position: 10px 10px;
+}
+
+.formulaireske {
+    padding: 0;
+    overflow: auto;
+    width: 100%
+}
+
+.formulaireske input {
+    padding-left: 0;
+}
+
+.competences a {
+    padding: 0.3em 2em;
+    display: inline-block;
+    margin-right: 2em;
+    text-decoration: none;
+    background: #fceabb;
+    background: -moz-linear-gradient(top, #fceabb 0%, #fccd4d 50%, #f8b500 51%, #fbdf93 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fceabb), color-stop(50%, #fccd4d), color-stop(51%, #f8b500), color-stop(100%, #fbdf93));
+    background: -webkit-linear-gradient(top, #fceabb 0%, #fccd4d 50%, #f8b500 51%, #fbdf93 100%);
+    background: -o-linear-gradient(top, #fceabb 0%, #fccd4d 50%, #f8b500 51%, #fbdf93 100%);
+    background: -ms-linear-gradient(top, #fceabb 0%, #fccd4d 50%, #f8b500 51%, #fbdf93 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#fceabb', endColorstr='#fbdf93', GradientType=0);
+    background: linear-gradient(top, #fceabb 0%, #fccd4d 50%, #f8b500 51%, #fbdf93 100%);
+}
+
+.competences a:hover {
+    color: #555;
+    background-color: hsl(41, 73%, 57%) !important;
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f1dbab", endColorstr="#e1ae41");
+    background-image: -khtml-gradient(linear, left top, left bottom, from(#f1dbab), to(#e1ae41));
+    background-image: -moz-linear-gradient(top, #f1dbab, #e1ae41);
+    background-image: -ms-linear-gradient(top, #f1dbab, #e1ae41);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f1dbab), color-stop(100%, #e1ae41));
+    background-image: -webkit-linear-gradient(top, #f1dbab, #e1ae41);
+    background-image: -o-linear-gradient(top, #f1dbab, #e1ae41);
+    background-image: linear-gradient(#f1dbab, #e1ae41);
+    border-color: #e1ae41 #e1ae41 hsl(41, 73%, 51%);
+    color: #333 !important;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.39);
+    -webkit-font-smoothing: antialiased;
+}
+
+.message {
+    clear: both;
+    padding-top: 2em;
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold
+}
+
+#zoneSelecteurEleve {
+    float: left;
+    padding: 0 1em;
+}
+
+#zoneSelecteurClasse {
+    float: left;
+    padding: 0 1em;
+}
+
+.detailsEleve ul {
+    list-style-type: none;
+    background-color: #ffd
+}
+
+.detailsEleve li ul {
+    padding: 1em 0 2em 0;
+    border-top: 2px solid red;
+}
+
+#wait {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 50%;
+    left: 50%;
+    margin-left: -50px;
+    margin-top: -50px;
+    z-index: 100;
+}
+
+#ajaxLoader {
+    position: absolute;
+    left: 50%;
+    margin-top: 50px;
+    z-index: 100;
+}
